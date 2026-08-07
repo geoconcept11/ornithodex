@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #e53935; /* Rouge vif */
+    --bg-color: #121212;      /* Fond sombre */
+    --card-bg: #1e1e1e;       /* Cartes légèrement plus claires */
+    --text-color: #ffffff;
+    --text-muted: #aaaaaa;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    border-bottom: 4px solid #b71c1c; /* Liseré plus sombre */
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#searchBar {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+main {
+    padding: 15px;
+}
+
+.bird-grid {
+    list-style: none;
+    display: grid;
+    gap: 15px;
+    /* Affichage en grille adaptable */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+}
+
+.bird-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.bird-image-placeholder {
+    height: 160px;
+    background-color: #333;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.bird-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.bird-latin {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.bird-status {
+    font-size: 0.8rem;
+    background-color: #333;
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 5px;
+}
